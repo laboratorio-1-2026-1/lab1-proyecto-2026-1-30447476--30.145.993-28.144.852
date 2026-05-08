@@ -1,0 +1,6 @@
+from .base_repository import BaseRepository
+from .maquina_repository import MaquinaRepository
+from .mantenimiento_repository import MantenimientoRepository
+from .categoria_producto_repository import CategoriaProductoRepository
+from .producto_repository import ProductoRepository
+from .venta_repository import VentaRepository
