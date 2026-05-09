@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.models.models import TicketMantenimiento, Maquina
 
 
-class MantenimientoRepository:
+class TicketMantenimientoRepository:
 
     @staticmethod
     def get_all(db: Session) -> List[TicketMantenimiento]:
@@ -65,7 +65,7 @@ class MantenimientoRepository:
         costo_reparacion: Optional[Decimal] = None,
         tecnico_responsable: Optional[str] = None,
     ) -> Optional[TicketMantenimiento]:
-        ticket = MantenimientoRepository.get_by_id(db, ticket_id)
+        ticket = TicketMantenimientoRepository.get_by_id(db, ticket_id)
         if not ticket:
             return None
 
