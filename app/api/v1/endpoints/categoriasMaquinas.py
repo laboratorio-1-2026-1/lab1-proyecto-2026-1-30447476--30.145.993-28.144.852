@@ -2,7 +2,8 @@ from typing import List
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.api.db.database import get_db
+from app.api.database.session import get_db
+
 from app.api.core.security import require_roles
 from app.api.schemas.schemas import (
     CategoriaMaquinaCreate,
