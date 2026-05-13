@@ -1,8 +1,8 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
 
-from app.models.models import Maquina, CategoriaMaquina
-from app.schemas.schemas import MaquinaCreate, MaquinaUpdate
+from app.api.models.models import Maquina, CategoriaMaquina
+from app.api.schemas.schemas import MaquinaCreate, MaquinaUpdate
 
 
 class MaquinaRepository:

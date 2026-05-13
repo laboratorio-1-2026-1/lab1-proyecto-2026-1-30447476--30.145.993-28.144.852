@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Numeric
 from sqlalchemy.orm import relationship
-from app.models.base import Base, TimestampMixin
+from app.api.models.base import Base, TimestampMixin
 
 class TicketMantenimiento(Base, TimestampMixin):
     __tablename__ = "tickets_mantenimiento"

@@ -1,8 +1,8 @@
 from typing import List, Optional
 from sqlalchemy.orm import Session
 
-from app.models.models import CategoriaProducto
-from app.schemas.schemas import ProductoCreate
+from app.api.models.models import CategoriaProducto
+from app.api.schemas.schemas import ProductoCreate
 
 
 class CategoriaProductoRepository:

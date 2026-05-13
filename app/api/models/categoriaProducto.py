@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.sql import func
-from app.database.session import Base
+from app.api.database.session import Base
 
 class CategoriaProducto(Base):
     __tablename__ = "categorias_producto"

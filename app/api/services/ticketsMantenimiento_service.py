@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from datetime import datetime, timezone
-from app.models.maquina import EstadoMaquina
-from app.repositories.ticketsMantenimiento_repository import TicketMantenimientoRepository
-from app.services.maquina_service import MaquinaService
-from app.schemas.ticketsMantenimiento import TicketCreate, TicketResolve
+from app.api.models.maquina import EstadoMaquina
+from app.api.repositories.ticketsMantenimiento_repository import TicketMantenimientoRepository
+from app.api.services.maquina_service import MaquinaService
+from app.api.schemas.ticketsMantenimiento import TicketCreate, TicketResolve
 
 
 class MantenimientoService:

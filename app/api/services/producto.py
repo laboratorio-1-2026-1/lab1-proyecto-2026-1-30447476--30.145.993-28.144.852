@@ -2,10 +2,10 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from typing import Optional, List
 from datetime import datetime, timezone
-from app.repositories.producto_repository import ProductoRepository
-from app.repositories.categoria_producto_repository import CategoriaProductoRepository
-from app.schemas.producto import ProductoCreate, ProductoUpdate
-from app.models.producto import Producto
+from app.api.repositories.producto_repository import ProductoRepository
+from app.api.repositories.categoria_producto_repository import CategoriaProductoRepository
+from app.api.schemas.producto import ProductoCreate, ProductoUpdate
+from app.api.models.producto import Producto
 
 class ProductoService:
     def __init__(self, db: Session):

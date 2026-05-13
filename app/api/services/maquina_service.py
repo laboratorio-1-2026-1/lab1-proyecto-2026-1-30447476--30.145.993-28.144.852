@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from datetime import datetime, timezone
-from app.models.maquina import EstadoMaquina
-from app.repositories.maquina_repository import MaquinaRepository
-from app.schemas.maquina import MaquinaCreate, MaquinaUpdate
+from app.api.models.maquina import EstadoMaquina
+from app.api.repositories.maquina_repository import MaquinaRepository
+from app.api.schemas.maquina import MaquinaCreate, MaquinaUpdate
 
 class MaquinaService:
     def __init__(self, db: Session):

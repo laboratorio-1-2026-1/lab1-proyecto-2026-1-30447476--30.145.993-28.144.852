@@ -3,12 +3,12 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from app.api.deps import get_db, require_roles
-from app.schemas.categorias_productos import (
+from app.api.schemas.categorias_productos import (
     CategoriaProductoCreate,
     CategoriaProductoUpdate,
     CategoriaProductoResponse,
 )
-from app.repositories.categorias_productos_repository import CategoriaProductoRepository
+from app.api.repositories.categorias_productos_repository import CategoriaProductoRepository
 
 router = APIRouter(prefix="/categorias-productos", tags=["Categorías de Productos"])
 

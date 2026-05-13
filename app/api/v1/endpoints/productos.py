@@ -2,16 +2,16 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.db.database import get_db
-from app.core.security import require_roles
-from app.core.errors import conflict_response, bad_request_response
-from app.schemas.schemas import (
+from app.api.db.database import get_db
+from app.api.core.security import require_roles
+from app.api.core.errors import conflict_response, bad_request_response
+from app.api.schemas.schemas import (
     ProductoCreate,
     ProductoStockUpdate,
     ProductoOut,
 )
-from app.repositories.producto_repository import ProductoRepository
-from app.repositories.categoria_producto_repository import CategoriaProductoRepository
+from app.api.repositories.producto_repository import ProductoRepository
+from app.api.repositories.categoria_producto_repository import CategoriaProductoRepository
 
 router = APIRouter(prefix="/api/v1/tienda", tags=["Tienda (POS)"])
 

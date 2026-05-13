@@ -1,5 +1,5 @@
-from app.repositories.venta_repository import VentaRepository
-from app.repositories.producto_repository import ProductoRepository
+from app.api.repositories.venta_repository import VentaRepository
+from app.api.repositories.producto_repository import ProductoRepository
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from typing import List, Dict

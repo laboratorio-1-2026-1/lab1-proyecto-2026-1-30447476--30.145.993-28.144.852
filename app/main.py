@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from app.database.session import engine, Base
+from app.api.database.session import engine, Base
 from app.api.v1.routers import router as api_router
-from app.core.dependencies import get_current_user  # si lo necesita
-from app.routers import categoriasMaquinas, maquinas, ticketsMantenimiento
-from app.routers import productos, ventas
+from app.api.core.dependencies import get_current_user  
+from app.api.routers import categoriasMaquinas, maquinas, ticketsMantenimiento
+from app.api.routers import productos, ventas
 
 Base.metadata.create_all(bind=engine)
 

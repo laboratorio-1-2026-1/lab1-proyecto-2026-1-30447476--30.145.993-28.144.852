@@ -2,15 +2,15 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.db.database import get_db
-from app.core.security import require_roles
-from app.core.errors import bad_request_response, conflict_response
-from app.schemas.schemas import (
+from app.api.db.database import get_db
+from app.api.core.security import require_roles
+from app.api.core.errors import bad_request_response, conflict_response
+from app.api.schemas.schemas import (
     VentaCreate,
     VentaOut,
 )
-from app.repositories.producto_repository import ProductoRepository
-from app.repositories.venta_repository import VentaRepository
+from app.api.repositories.producto_repository import ProductoRepository
+from app.api.repositories.venta_repository import VentaRepository
 
 router = APIRouter(prefix="/api/v1/tienda", tags=["Tienda (POS)"])
 

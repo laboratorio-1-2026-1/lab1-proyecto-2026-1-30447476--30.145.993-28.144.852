@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Float, ForeignKey
 from sqlalchemy.orm import relationship
-from app.models.base import Base, TimestampMixin
+from app.api.models.base import Base, TimestampMixin
 
 class VentaDetalle(Base, TimestampMixin):
     __tablename__ = "ventas_detalle"
@@ -10,6 +10,8 @@ class VentaDetalle(Base, TimestampMixin):
     producto_id = Column(Integer, ForeignKey("productos_tienda.id"), nullable=False)
     cantidad = Column(Integer, nullable=False)
     precio_unitario = Column(Float, nullable=False)
+    subtotal = Column(Float, nullable=False)
+    
 
     # Relaciones
     venta = relationship("VentaTienda", back_populates="detalles")

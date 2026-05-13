@@ -2,16 +2,16 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.db.database import get_db
-from app.core.security import require_roles
-from app.core.errors import conflict_response
-from app.schemas.schemas import (
+from app.api.db.database import get_db
+from app.api.core.security import require_roles
+from app.api.core.errors import conflict_response
+from app.api.schemas.schemas import (
     TicketCreate,
     TicketResolverRequest,
     TicketOut,
 )
-from app.repositories.maquina_repository import MaquinaRepository
-from app.repositories.mantenimiento_repository import MantenimientoRepository
+from app.api.repositories.maquina_repository import MaquinaRepository
+from app.api.repositories.mantenimiento_repository import MantenimientoRepository
 
 router = APIRouter(prefix="/api/v1", tags=["Máquinas e Instalaciones"])
 

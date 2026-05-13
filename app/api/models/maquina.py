@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, Date, DateTime, ForeignKey, Enum
 from sqlalchemy.orm import relationship
 import enum
-from app.models.base import Base, TimestampMixin
+from app.api.models.base import Base, TimestampMixin
 
 class EstadoMaquina(str, enum.Enum):
     ACTIVA = "ACTIVA"

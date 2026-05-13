@@ -3,7 +3,7 @@ from decimal import Decimal
 from typing import List, Optional
 from sqlalchemy.orm import Session
 
-from app.models.models import TicketMantenimiento, Maquina
+from app.api.models.models import TicketMantenimiento, Maquina
 
 
 class TicketMantenimientoRepository:

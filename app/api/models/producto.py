@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
-from app.database.session import Base
+from app.api.database.session import Base
 
 class Producto(Base):
     __tablename__ = "productosTienda"   # nombre exacto según MER

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from sqlalchemy.orm import relationship
 from datetime import datetime
-from app.models.base import Base  
+from app.api.models.base import Base  
 
 class CategoriaMaquina(Base):
     __tablename__ = "categorias_maquinas"

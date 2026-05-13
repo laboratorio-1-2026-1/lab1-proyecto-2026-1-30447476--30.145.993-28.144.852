@@ -2,7 +2,7 @@ from decimal import Decimal
 from typing import List, Optional
 from sqlalchemy.orm import Session
 
-from app.models.models import VentaTienda, VentaDetalle, ProductoTienda
+from app.api.models.models import VentaTienda, VentaDetalle, ProductoTienda
 
 
 class VentaRepository:

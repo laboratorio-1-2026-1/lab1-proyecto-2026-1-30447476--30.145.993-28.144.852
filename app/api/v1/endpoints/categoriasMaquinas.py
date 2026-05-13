@@ -2,13 +2,13 @@ from typing import List
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.db.database import get_db
-from app.core.security import require_roles
-from app.schemas.schemas import (
+from app.api.db.database import get_db
+from app.api.core.security import require_roles
+from app.api.schemas.schemas import (
     CategoriaMaquinaCreate,
     CategoriaMaquinaOut,
 )
-from app.repositories.maquina_repository import MaquinaRepository
+from app.api.repositories.maquina_repository import MaquinaRepository
 
 router = APIRouter(prefix="/api/v1", tags=["Máquinas e Instalaciones"])
 
