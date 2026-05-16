@@ -28,11 +28,11 @@ app.add_middleware(
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 
-@app.on_event("startup")
-async def startup():
-    create_tables()
-    print(f"✅ {settings.PROJECT_NAME} iniciado")
-    print("📚 Docs: http://localhost:8000/docs")
+# S@app.on_event("startup")
+# async def startup():
+#    create_tables()
+#    print(f"✅ {settings.PROJECT_NAME} iniciado")
+#    print("📚 Docs: http://localhost:8000/docs")
 
 
 @app.get("/", tags=["Health"])
